@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        const f=new Number(273)
+        console.log(typeof f)
+        f.sample=10
+  //기본형인 숫자형이라도 new 예약어로 객체생성을 해주면 속성값 가질수 있다.      
+        console.log(f.sample)
+        console.log(f)
+  //객체에 따로 속성값이 저장 되어 객체단독 호출시 속성값은 호출안됨      
+        console.log(f+1)
+        console.log(f.valueOf()+3)
+  //객체.속성.valueof()해야 속성값인 sample가 출력됨      
+        console.log(f.sample.valueOf())
+        
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

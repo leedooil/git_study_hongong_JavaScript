@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<script>
+     //정사각형 클래스
+     class Square{
+        //length 속성을 private 처리하겠다고 미리 선언
+        #length
+
+        //생성자
+        constructor(length){
+            if(length<=0){
+                throw '길이는 0보다 커야 합니다.'
+            }
+            this.#length=length
+        }
+        //메소드 : 정사각형 둘레
+        getPerimeter(){return 4*this.#length}
+
+        //메소드 : 정사각형 넓이
+        getArea(){return this.#length*this.#length}
+    }
+
+    //클래스 선언
+    const square=new Square(10)
+    
+    //외부에서는 length속성이 보이지않아 안먹힘. 오류는 안뜸
+    //square.length=-10
+    
+    //외부에서 마찬가지로 #length속성 사용불가. 오류뜸
+    //square.#length=-10
+    
+    console.log(`정사각형의 둘레:${square.getPerimeter()}`)
+    console.log(`정사각형의 넓이:${square.getArea()}`)
+</script>
+<body>
+    
+</body>
+</html>

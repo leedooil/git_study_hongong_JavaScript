@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        document.addEventListener('DOMContentLoaded',()=>{
+            const imgs=document.querySelectorAll('img')
+
+            imgs.forEach((img)=>{
+                img.addEventListener('contextmenu',(event)=>{
+                    event.preventDefault()
+              //마우스 오른쪽 클릭해서 나오는 메뉴들을 안 나오게 해주는 매소드
+                })
+            })
+        })
+    </script>
+</head>
+<body>
+            <!-- 작업할때 절대 경로 사용하면 안됨 -->
+    <img src="E:/leedooil_HTML5_CSS/images/pf.jpg" width="300" height="300" alt="호랭이">
+    <img src="E:/leedooil_HTML5_CSS/images/dog1.jpg" width="300" height="300" alt="리트리버">
+    <img src="E:/leedooil_HTML5_CSS/images/dog2.jpg" width="300" height="300" alt="불독">
+    <img src="E:/leedooil_HTML5_CSS/images/dog3.jpg" width="300" height="300" alt="하운드">
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        const test={
+            a:function(){
+                console.log(this)
+            },
+            b:()=>{
+                console.log(this)
+            }
+        }
+        //둘다 같은 값을 출력해주지만 표현형식이 다름
+        test.a() //test 객체를 직관적으로 표현
+
+        test.b() //test 객체를 람다식 window기준으로 출력
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

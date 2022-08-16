@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+    //기본 자료형(숫자,문자열,boolean형은 객체가 아니라서 속성 못가짐)
+        
+        const c=273  //숫자형
+        c.sample=10  //속성 정의 못함   
+        console.log(c)
+        console.log(c.sample)
+        console.log('')
+
+        const d='안녕하세요'  //문자형
+        d.sample=10          //속성 정의 못함   
+        console.log(d)
+        console.log(d.sample)
+        console.log('')
+
+        const e=true  //boolean형    
+        e.sample=10   //속성 정의 못함  
+        console.log(e)
+        console.log(e.sample)
+
+        const pet={          //기본형이 아님 객체형
+            name:'구름'
+        }
+        pet.eat='고양이 사료' //pet는 객체형이라 따로 속성정의 가능  
+        console.log(pet)
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

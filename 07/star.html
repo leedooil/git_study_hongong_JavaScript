@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        document.addEventListener('DOMContentLoaded',()=>{
+            //별의 초기 설정
+            const star=document.querySelector('h1')
+            //조작하여 position 값을 설정해주려고 absolute 넣음
+            star.style.position='absolute'
+
+            //조작된 값을 별의 이동으로 나타내는 함수
+            let[x,y]=[0,0]
+            const block=20
+            const print=()=>{
+                star.style.left=`${x*block}px`
+                star.style.top=`${y*block}px`
+            }
+            //처음 print() 함수 사용해서 초기 고정값 x=0,y=0 설정
+            print()
+
+            //별을 조작할 수 있는 기능을 가진 함수
+            const[left,up,right,down]=[37,38,39,40]
+            document.body.addEventListener('keydown',(event)=>{
+                switch(event.keyCode){
+                    case left:
+                        x-=1
+                        break
+                    case up:
+                        y-=1
+                        break
+                    case right:
+                        x+=1
+                        break
+                    case down:
+                        y+=1
+                        break
+                }
+                print()
+   //그다음 print() 함수 사용해서 초기 고정값 x=0,y=0을 case에 맞게 조정 해줌
+            })
+        })
+    </script>
+</head>
+<body>
+    <h1>★</h1>
+</body>
+</html>

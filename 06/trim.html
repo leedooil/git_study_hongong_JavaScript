@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        const stringA=`
+        메세지를 입력하다보니 앞에 줄바꿈도 들어가고`
+        //줄바꿈 들어가면 ''말고 ``사용해야 오류안나네?
+        const stringB=' 앞과 뒤에 공백도 들어가고 '
+        //줄바꿈 안들어가면 ''나 ``사용해도 똑같음
+        console.log(stringA)
+        console.log(stringB)
+        console.log(stringA.trim())
+        console.log(stringB.trim())
+
+        let str1=' 
+        안녕하세요 '
+        const str2='안녕하세요'
+        console.log(str1)
+        console.log(str2)
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

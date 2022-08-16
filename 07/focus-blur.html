@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<script>
+    document.addEventListener('DOMContentLoaded',()=>{
+        const textarea=document.querySelector('textarea')
+        const h1=document.querySelector('h1')
+        let timerId
+                        //마우스 클릭시 focus(글자 수) 활성화
+        textarea.addEventListener('focus',(event)=>{
+            timerId=setInterval(()=>{
+                const length=textarea.value.length
+                h1.textContent=`글자 수:${length}`
+            },50)
+        })
+            //마우스 안 클릭시 blur 활성화 focus 했을때처럼 글자 수 안뜸
+        textarea.addEventListener('blur',(event)=>{
+            clearInterval(timerId)
+        })
+    })
+</script>
+<body>
+    <h1></h1>            <!-- cols:열, rows:행 -->
+    <textarea name="" id="" cols="50" rows="2"></textarea>
+</body>
+</html>

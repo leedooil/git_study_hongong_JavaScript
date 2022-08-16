@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        document.addEventListener('DOMContentLoaded',()=>{
+            //body의 h1 요소를 읽어들인다.
+            const headers=document.querySelectorAll('h1')
+            //querySelectorAll을 써서 여러 개인 h1 문서 객체를
+            //배열로 읽어들임 그리고 forEach()매소드를 사용해서
+            //배열 형태인 h1태그를 하나하나 읽어 순서대로 텍스트와 스타일 변경
+            headers.forEach((header)=>{
+            header.textContent='HEADERS'
+            header.style.color='white'
+            header.style.background='red'
+            header.style.padding='10px'
+            })
+        })
+    </script>
+</head>
+<body>
+    <h1></h1>
+    <h1></h1>
+    <h1></h1>
+    <h1></h1>
+</body>
+</html>

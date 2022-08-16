@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<script>
+    function divide(a,b){
+        if(b===0){
+            
+            //0으로 나누면 무한대 값을 가져 큰일 나기때문에
+            // throw를 사용해 강제로 오류발생시켜준다.
+            throw '0으로 나눌 수 없습니다.'
+        }
+        return a/b
+    }
+    console.log(divide(10,2))
+    console.log(divide(10,0))
+</script>
+<body>
+    
+</body>
+</html>

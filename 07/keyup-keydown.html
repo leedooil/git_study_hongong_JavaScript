@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        document.addEventListener('DOMContentLoaded',()=>{
+            const h1 = document.querySelector('h1')
+            const print=(event)=>{
+                let output=''
+                //이벤트가 발생하면 boolean 값으로 반환해준다
+                output+=`alt:${event.altKey}<br>`
+                output+=`ctrl:${event.ctrlKey}<br>`
+                output+=`shift:${event.shiftKey}<br>`
+                
+                //삼항 연산자
+                //event.code가 있으면 event.code 출력
+                //undefined면 event.keyCode 출력 
+                output+=`code:${typeof(event.code)!=='undefined'?
+            event.code:event.keyCode}<br>`
+            //code:입력한 키 keyCode:입력한 키를 나타내는 숫자
+            
+            h1.innerHTML=output
+            //output을 innerHTML형식으로 바꿔줘
+            }
+
+            //이벤트 실행 : 키 눌린상태에서 값 출력
+            document.addEventListener('keydown',print)
+            
+            //이벤트 실행 : 키 떼자마자 값 출력
+            document.addEventListener('keyup',print)
+        })
+    </script>
+</head>
+<body>
+    <h1></h1>
+</body>
+</html>

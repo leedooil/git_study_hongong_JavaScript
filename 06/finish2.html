@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        const object={
+            name:'혼자 공부하는 파이썬',
+            price:18000,
+            publisher:'한빛미디어'
+        }
+ //name 속성 값이 undefined가 아니야? 어 그러면 그대로 name써
+        object.name=object.name !== undefined ? object.name:'제목 미정'
+ //author 속성 값이 undefined가 아니야? 아니? 그러면 '저자미상'으로 속성부여해
+        object.author=object.author !== undefined ? object.author:'저자 미상'
+
+        console.log(JSON.stringify(object,null,2))
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

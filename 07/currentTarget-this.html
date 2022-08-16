@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        //case1:현재 블록 들이 따로 분리 되어있어서 아래 지역변수 인 textarea를
+        //listener 함수에서 불러다가 사용못함
+        const listener=(event)=>{
+            const length=textarea.value.length
+            h1.textContent=`글자 수:${length}`
+        }
+
+        document.addEventListener('DOMContentLoaded',()=>{
+            const textarea = document.querySelector('textarea')
+            const h1=document.querySelector('h1')
+            textarea.addEventListener('keyup',listener)
+        })
+    </script>
+
+    <script>
+    //case2:case1의 오류를 해결하기 위해서 event.currentTarget 매소드를 사용해
+    //현재 querySelector로 가르키고 있는 textarea 변수를 listener1함수에서
+    //끌어다가 쓸 수있음
+        const listener1=(event)=>{
+            const length=event.currentTarget.value.length
+            h1.textContent=`글자 수:${length}`
+        }
+
+        document.addEventListener('DOMContentLoaded',()=>{
+            const textarea = document.querySelector('textarea')
+            const h1=document.querySelector('h1')
+            textarea.addEventListener('keyup',listener)
+        })
+    </script>
+
+    <script>
+    //case3:case2와 다른 방법의 오류 해결로 익명함수가 아닌 명명함수로 정의해
+    //this를 사용해 밑에 textarea 변수를 받아 쓴다.
+        const listener2=function(event){
+            const length=this.value.length
+            h1.textContent=`글자 수:${length}`
+        }
+
+        document.addEventListener('DOMContentLoaded',()=>{
+            const textarea = document.querySelector('textarea')
+            const h1=document.querySelector('h1')
+            textarea.addEventListener('keyup',listener)
+        })
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
