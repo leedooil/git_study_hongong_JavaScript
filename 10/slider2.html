@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>이미지 슬라이더</title>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css" />
+    <script>
+      $( document ).ready( function() {
+        $( '.slider' ).slick( {
+          autoplay: true,
+          autoplaySpeed: 2000,
+        } );
+      } );
+    </script>
+    <style>
+      img {
+        max-width: 100%;
+        height: auto;
+      }
+      .slider {
+        width: 300px;
+        margin: 0px auto;
+      }
+      .slick-prev:before, .slick-next:before {
+        color: #444444;
+      }
+    </style>
+</head>
+<body>
+    <div class="slider">
+        <div><img src="E:\leedooil_HTML5_CSS\images\food1.jpg"></div>
+        <div><img src="E:\leedooil_HTML5_CSS\images\food2.jpg"></div>
+        <div><img src="E:\leedooil_HTML5_CSS\images\food3.jpg"></div>
+        <div><img src="E:\leedooil_HTML5_CSS\images\food4.jpg"></div>
+    </div>
+</body>
+</html>
